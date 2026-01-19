@@ -4,11 +4,12 @@ A simple command-line expense tracking application built with Python that helps 
 
 ## Description
 
-This expense tracker allows users to record their daily expenses, categorize them, and view spending summaries. All data is stored in a CSV file for easy access and portability.
+This expense tracker allows users to record their daily expenses, categorise them, and view spending summaries. All data is stored in a CSV file for easy access and portability.
 
 ## Features
 
 - **Add Expense**: Record new expenses with date, category, amount, and optional notes
+- **View an Expense**: Filter and view expenses by specific category
 - **View All Expenses**: Display a complete list of all recorded expenses
 - **View Summary**: See total spending and breakdown by category
 - **Persistent Storage**: All expenses are automatically saved to a CSV file
@@ -27,8 +28,8 @@ This expense tracker allows users to record their daily expenses, categorize the
 ## File Structure
 
 ```
-Python Project/
-├── main.py          # Main application file
+Python Project 1/
+├── Project1.py      # Main application file
 ├── expenses.csv     # Data storage (created automatically)
 └── README.md        # This file
 ```
@@ -40,7 +41,7 @@ Python Project/
 Open a terminal/command prompt in the project directory and run:
 
 ```bash
-python main.py
+python Project1.py
 ```
 
 ### Menu Options
@@ -50,33 +51,42 @@ When you run the application, you'll see the following menu:
 ```
 === Expense Tracker ===
 1) Add Expense
-2) View all Expenses
-3) View Summary
-4) Exit
+2) View an Expense
+3) View all Expenses
+4) View Summary
+5) Exit
 ```
 
 ### Adding an Expense
 
 1. Select option `1` from the menu
-2. Enter the date in `YYYY-MM-DD` format (e.g., 2026-01-13)
-3. Enter a category (e.g., food, transport, entertainment)
+2. Enter the date in `DD-MM-YY` format (e.g., 19-01-26)
+3. Enter a category from the allowed options: **Food**, **Clothes**, **Rent**, or **Transport**
 4. Enter the amount as a number (e.g., 25.50)
 5. Optionally add a note describing the expense
 
-### Viewing Expenses
+**Note**: The application validates the date format and only accepts the four predefined categories.
 
-- Select option `2` to see a numbered list of all recorded expenses
+### Viewing an Expense by Category
+
+- Select option `2` to filter expenses by a specific category
+- Enter one of the allowed categories: Food, Clothes, Rent, or Transport
+- The system will display all expenses matching that category
+
+### Viewing All Expenses
+
+- Select option `3` to see a numbered list of all recorded expenses
 - Each entry shows: date, category, amount (in £), and notes
 
 ### Viewing Summary
 
-- Select option `3` to see spending statistics
+- Select option `4` to see spending statistics
 - Displays total amount spent across all categories
 - Shows breakdown of spending by category
 
 ### Exiting
 
-- Select option `4` to exit the program safely
+- Select option `5` to exit the program safely
 
 ## Data Storage
 
@@ -90,13 +100,14 @@ When you run the application, you'll see the following menu:
 ```
 === Expense Tracker ===
 1) Add Expense
-2) View all Expenses
-3) View Summary
-4) Exit
+2) View an Expense
+3) View all Expenses
+4) View Summary
+5) Exit
 
 Select an option: 1
-Enter date (YYYY-MM-DD): 2026-01-13
-Enter category (e.g., food, transport): food
+Enter date (DD-MM-YY): 19-01-26
+Enter category ["Food", "Clothes", "Rent", "Transport"]: Food
 Enter amount: 15.50
 Enter note (optional): Lunch at cafe
 
@@ -118,7 +129,7 @@ Potential features for future versions:
 - Export summaries to different formats
 - Budget tracking and alerts
 - Multiple currency support
-- Data visualization with charts
+- Data visualisation with charts
 
 ## License
 
@@ -127,3 +138,8 @@ This project is free to use and modify for personal or educational purposes.
 ## Author
 
 Created as a personal finance management tool.
+
+## Author
+
+Created as a personal finance management tool.
+
