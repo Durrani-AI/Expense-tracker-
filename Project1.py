@@ -54,11 +54,15 @@ def view_expenses_by_category(expenses):
         print("No expenses recorded yet.")
         return
     category = input("which expense??: [\"Food\", \"Clothes\", \"Rent\", \"Transport\"] ").strip()
+    
+    found = False
     for i in expenses:
-        if i["category"]== category:
+        if i["category"] == category:
             print(i)
-        else:
-            print("no expenses in this category")
+            found = True
+    
+    else:
+        print("No expenses in this category.")
     
 
 def view_expenses(expenses):
